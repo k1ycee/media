@@ -7,7 +7,7 @@ import 'dart:convert';
 String url = 'https://swapi.co/api/planets/?format=json';
 
 
-Future<SwapPlanet> getpeople() async{
+Future<SwapPlanet> getplanet() async{
   final pepreq = await http.get(url);
   if(pepreq.statusCode == 200){
     return SwapPlanet.fromJson(jsonDecode(pepreq.body));
